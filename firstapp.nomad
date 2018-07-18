@@ -18,7 +18,7 @@ job "FirstApp" {
   }
 
   group "dotnet" {
-    count = 2
+    count = 1
     task "firstapp" {
       driver = "exec"
 
