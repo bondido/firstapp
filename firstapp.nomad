@@ -18,6 +18,7 @@ job "FirstApp" {
   }
 
   group "dotnet" {
+    count = 2
     task "firstapp" {
       driver = "exec"
 
@@ -30,8 +31,8 @@ job "FirstApp" {
         source = "git::https://github.com/bondido/firstapp/appv1.tar.gz"
       }
       resources {
-        cpu    = 100 # 500 MHz
-        memory = 100 # 256MB
+        cpu    = 100 # 100 MHz
+        memory = 100 # 100MB
         network {
           mbits = 10
           port "netcore" {
